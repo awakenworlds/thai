@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thai Flashcards</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Thai Flashcards</h1>
+
+    <!-- Filters -->
+    <div id="filters">
+      <label><input type="checkbox" class="filter-checkbox" value="letter">Letter</label>
+      <label><input type="checkbox" class="filter-checkbox" value="number">Number</label>
+      <label><input type="checkbox" class="filter-checkbox" value="verb">Verb</label>
+      <label><input type="checkbox" class="filter-checkbox" value="noun">Noun</label>
+      <label><input type="checkbox" class="filter-checkbox" value="adjective">Adjective</label>
+      <label><input type="checkbox" class="filter-checkbox" value="popular">Popular</label>
+    </div>
+
+    <button id="english-mode-btn">EN ↔ TH</button>
+
+    <div class="card">
+      <div id="question"></div>
+      <div id="answer" class="hidden"></div>
+      <div id="feedback" class="hidden"></div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" id="romanized-answer-input" placeholder="romanized" autocomplete="off">
+      <button id="submit-romanized-btn" class="submit-button">Submit</button>
+      <button id="show-roman-answer-btn" class="submit-button">Ans</button>
+    </div>
+
+    <div class="input-group" id="english-field-group">
+      <input type="text" id="english-answer-input" placeholder="english" autocomplete="off">
+      <button id="submit-english-btn" class="submit-button">Submit</button>
+      <button id="show-english-answer-btn" class="submit-button">Ans</button>
+    </div>
+
+    <div class="button-container">
+      <button id="prev-card-btn">Prev</button>
+      <button id="next-card-btn">Next</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

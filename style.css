@@ -1,0 +1,165 @@
+/* General Page Layout */
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #0d1b2a;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 40px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Quiz Container */
+.quiz-container {
+  background: #1b263b;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  padding: 1.5em;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #f0f0f0;
+  margin-bottom: 0.5em;
+}
+
+/* Flashcard */
+.card {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.card #question {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5em;
+}
+
+#answer {
+  font-size: 1.4rem;
+  color: #16a085;
+  margin-top: 0.5em;
+}
+
+#answer.hidden {
+  display: none;
+}
+
+/* Input Groups (inputs + buttons inline) */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0.8em 0;
+}
+
+.input-group input[type="text"] {
+  flex: 1;
+  padding: 0.7em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fefefe;
+  color: #2c3e50;
+}
+
+/* Submit + Answer buttons */
+.input-group .submit-button,
+.input-group .ans-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6em 0.9em;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.input-group .submit-button:hover,
+.input-group .ans-button:hover {
+  background-color: #2980b9;
+}
+
+/* Navigation Buttons */
+.button-container {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav-button,
+#prev-card-btn,
+#next-card-btn,
+#english-mode-btn {
+  background-color: #34495e;
+  border: 1px solid #555;
+  color: #f0f0f0;
+  padding: 0.6em 1em;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nav-button:hover,
+#prev-card-btn:hover,
+#next-card-btn:hover,
+#english-mode-btn:hover {
+  background-color: #2c3e50;
+}
+
+/* Filters */
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+#filters label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+#filters input[type="checkbox"] {
+  accent-color: #3498db;
+}
+
+/* Feedback */
+#feedback {
+  margin-top: 0.5em;
+  font-size: 1rem;
+  color: #2ecc71;
+}
+
+#feedback.incorrect {
+  color: #e74c3c;
+}
+
+#feedback.hidden {
+  display: none;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; }
+  .card #question { font-size: 2.4rem; }
+  .input-group input[type="text"],
+  .submit-button,
+  .ans-button,
+  .nav-button {
+    font-size: 0.9rem;
+  }
+}
