@@ -274,7 +274,7 @@ filterCheckboxes.forEach(cb => cb.addEventListener('change', applyFilters));
 // Load quiz data
 async function initializeQuiz() {
   try {
-    const response = await fetch('data.json');
+    const response = await fetch('/data.json');
     quizData = await response.json();
     applyFilters();
   } catch (err) {
@@ -300,3 +300,4 @@ function enforceEnglishInput(inputElement) {
 
 enforceEnglishInput(romanizedInput);
 enforceEnglishInput(englishInput);
+
